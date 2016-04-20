@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>
+            Vendors
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'vendz/vendorDetail.css' %}" />
+    
+    </head>
+    <body> 
+        <h2> {{vendor.name}} has appeared in {{vendor.occurances}} events </h4>
+        {% if upcomingEvents %}
+            
+            <div>
+                
+                <ul>
+                    <h1> Upcoming Events </h1>
+                    {% for event in upcomingEvents %}
+                        <li class="future">
+                            <a href = '/vendz/events/{{event.eventID}}'>
+                                <div class="event_body">
+                                    <div class="event_name">{{event.name}} </div>
+                                    <div class="event_start">Start time: {{event.start_time}} </div>
+                                    <div class="event_end">End time: {{event.end_time}}</div>
+                                    <div class="event_location">{{event.location}}</div>
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <p>No upcoming events are available.</p>
+        {% endif %}
+
+        {% if pastEvents %}
+            
+            <div>
+                <ul>
+                <h1> Past Events </h1>
+                    {% for event in pastEvents %}
+                        <li class = "past">
+                            <a href = '/vendz/events/{{event.eventID}}'>
+                                <div class="event_body">
+                                    <div class="event_name">{{event.name}} </div>
+                                    <div class="event_start">Start time: {{event.start_time}} </div>
+                                    <div class="event_end">End time: {{event.end_time}}</div>
+                                    <div class="event_location">{{event.location}}</div>
+                                </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <p>No past events are available.</p>
+        {% endif %}
+    </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+{% load staticfiles %}
+
+
+<html>
+	<head>
+        <title>
+            Events
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'vendz/events.css' %}" />
+    
+    </head>
+    <body> 
+        {% if upcomingEvents %}
+			<h1> Upcoming Events </h1>
+    		<ul>
+    			{% for event in upcomingEvents %}
+        			<li>
+        				<a href = './{{event.eventID}}'>
+        					<div class="event_body">
+        						<div class="event_name">{{event.name}} </div>
+        						<div class="event_start">Start time: {{event.start_time}} </div>
+        						<div class="event_end">End time: {{event.end_time}}</div>
+        						<div class="event_location">{{event.location}}</div>
+        					</div>
+        				</a>
+        			</li>
+    			{% endfor %}
+    		</ul>
+		{% else %}
+    		<p>No upcoming events are available.</p>
+		{% endif %}
+
+		{% if pastEvents %}
+			 <h1> Past Events </h1>
+   			 <ul>
+    			{% for event in pastEvents %}
+        			<li>
+        				<a href = './{{event.eventID}}'>
+        					<div class="event_body">
+        						<div class="event_name">{{event.name}} </div>
+        						<div class="event_start">Start time: {{event.start_time}} </div>
+        						<div class="event_end">End time: {{event.end_time}}</div>
+        						<div class="event_location">{{event.location}}</div>
+        					</div>
+        			</li>
+    			{% endfor %}
+    		</ul>
+		{% else %}
+    		<p>No past events are available.</p>
+		{% endif %}
+    </body>
+</html>
+

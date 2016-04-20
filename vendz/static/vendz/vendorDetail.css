@@ -1,0 +1,33 @@
+li {
+	border : 1px solid;
+	margin-bottom: 10px;
+	width: 600px;
+	border-radius: 10px;
+
+}
+
+li.future {
+	background-color: #DFF5DC;
+}
+
+li.past {
+	background-color: #F5DCDC;
+}
+a {
+	text-decoration: none;
+}
+
+.event_body {
+	color: black;
+	text-decoration: none;
+	padding: 5px;
+	font-family: Helvetica;
+}
+ul {
+	list-style-type: none;
+}
+.event_start, .event_end {
+	text-align: right;
+}
+
+#

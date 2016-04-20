@@ -1,0 +1,29 @@
+li {
+	border : 1px solid;
+	margin-bottom: 10px;
+	width: 1000px;
+}
+
+.event_body {
+	color: black;
+	text-decoration: none;
+	padding: 5px;
+	font-family: Helvetica;
+
+}
+
+.event_name {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.event_start, .event_end {
+	text-align: right;
+}
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}

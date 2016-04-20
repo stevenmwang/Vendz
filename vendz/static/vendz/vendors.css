@@ -1,0 +1,17 @@
+table {
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+tr {
+	margin-top: 10px;
+}
+
+td.occur {
+	text-align: center;
+}

@@ -1,0 +1,32 @@
+
+{% load staticfiles %}
+<html>
+	<head>
+        <title>
+            {{event.name}}
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'vendz/eventDetail.css' %}" />
+    </head>
+    <body> 
+    	<div class = "event_prop">
+    		<h1> {{event.name}} </h1>
+    		<h3>{{event.location}} </h3>
+    			{{event.start_time}} to {{event.end_time}}
+    	</div>
+
+		<div class = "vendors"> 
+			<h2> Vendors at this event </h2>
+			{% if vendor_list %}
+  			 	<ul>
+  				 	{% for vendor in vendor_list %}
+     				   <li><a href = '/vendz/vendors/{{vendor.vendor_id}}'>{{vendor.name}}  </li>
+   				  	{% endfor %}
+    			</ul>
+			{% else %}
+    			<p>No Vendors are available.</p>
+			{% endif %}
+		</div>        
+    </body>
+</html>
+
+

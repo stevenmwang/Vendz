@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<html>
+	<head>
+        <title>
+            Vendors
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'vendz/vendors.css' %}" />
+    
+    </head>
+    <body> 
+        {% if vendor_list %}
+    		<table cellspacing = 0>
+    			<th> Vendor Name </th>
+    			<th> Past Event Occurances </th>
+    			{% for vendor in vendor_list %}
+        			<tr>
+        				<td> <a href = './{{vendor.vendor_id}}'>{{vendor.name }} </a></td>
+        				<td class = "occur"> {{vendor.occurances}}</td>
+    			{% endfor %}
+    		</table>
+		{% else %}
+    		<p>No Vendors are available.</p>
+		{% endif %}
+    </body>
+</html>
+
+
+
