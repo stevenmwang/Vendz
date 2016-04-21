@@ -1,23 +1,57 @@
 {% load staticfiles %}
+
+#navbar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #141413;
+}
+
+#navbar > ul > li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.active {
+background-color:#298AAB;
+}
 a {
 	text-decoration: none;
 	color: white;
 	font-size: 100px;
 }
+h1 {
+	text-align: center;
+}
 
 .event_link {
 	background: url("images/events_pic.jpg");
+	text-align: center;
 	
 	display: block;
-	background-size: 800px 300px;
+	background-size: 625px 300px;
 	height: 300px;
-	width: 800px;
+	width: 625px;
+	float:left;
 }
 
 .vendors_link {
+	color: white;
+	text-align: center;
 	background: url("images/vendors_pic.jpg");
 	display: block;
-	background-size: 800px 300px;
+	background-size: 625px 300px;
 	height: 300px;
-	width: 800px;
+	width: 625px;
+	float:right;
 }

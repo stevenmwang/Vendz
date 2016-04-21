@@ -8,6 +8,13 @@
     
     </head>
     <body> 
+    	<div id="navbar">
+            <ul>
+                <li><a href="/vendz">Home</a></li>
+                <li><a href="/vendz/events">Events</a></li>
+                <li><a class="active" href="/vendz/vendors">Vendors</a></li>
+            </ul>
+        </div>
         {% if vendor_list %}
     		<table cellspacing = 0>
     			<th> Vendor Name </th>
@@ -23,6 +30,4 @@
 		{% endif %}
     </body>
 </html>
-
-
 

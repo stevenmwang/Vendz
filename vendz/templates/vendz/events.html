@@ -1,3 +1,4 @@
+
 {% load staticfiles %}
 
 
@@ -10,11 +11,18 @@
     
     </head>
     <body> 
+        <div id="navbar">
+            <ul>
+                <li><a href="/vendz">Home</a></li>
+                <li><a class="active" href="/vendz/events">Events</a></li>
+                <li><a href="/vendz/vendors">Vendors</a></li>
+            </ul>
+        </div>
         {% if upcomingEvents %}
 			<h1> Upcoming Events </h1>
     		<ul>
     			{% for event in upcomingEvents %}
-        			<li>
+        			<li class = "future">
         				<a href = './{{event.eventID}}'>
         					<div class="event_body">
         						<div class="event_name">{{event.name}} </div>
@@ -32,9 +40,9 @@
 
 		{% if pastEvents %}
 			 <h1> Past Events </h1>
-   			 <ul>
+   			 <ul >
     			{% for event in pastEvents %}
-        			<li>
+        			<li class = "past">
         				<a href = './{{event.eventID}}'>
         					<div class="event_body">
         						<div class="event_name">{{event.name}} </div>

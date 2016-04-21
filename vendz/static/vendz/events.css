@@ -1,8 +1,3 @@
-li {
-	border : 1px solid;
-	margin-bottom: 10px;
-	width: 1000px;
-}
 
 .event_body {
 	color: black;
@@ -20,10 +15,68 @@ li {
 .event_start, .event_end {
 	text-align: right;
 }
-a {
-	text-decoration: none;
-}
 
 ul {
 	list-style-type: none;
 }
+
+ul.header {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #DBDBDB;
+    height: 40px;
+    color: black;
+}
+
+li.past, li.future {
+	border : 1px solid;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	width: 1000px;
+}
+li.future {
+	background-color: #DFF5DC;
+}
+
+li.past {
+	background-color: #F5DCDC;
+}
+
+li.header {
+	display:inline;
+	font-size: 30px;
+	padding-left: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+#navbar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #141413;
+}
+
+#navbar > ul > li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.active {
+	background-color:#298AAB;
+}
+
+
