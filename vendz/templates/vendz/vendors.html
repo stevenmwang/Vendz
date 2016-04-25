@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load poll_extras %}
 <html>
 	<head>
         <title>
@@ -15,14 +16,14 @@
                 <li><a class="active" href="/vendz/vendors">Vendors</a></li>
             </ul>
         </div>
-        {% if vendor_list %}
+        {% if vendor_occ %}
     		<table cellspacing = 0>
     			<th> Vendor Name </th>
     			<th> Past Event Occurances </th>
-    			{% for vendor in vendor_list %}
+    			{% for vendor in vendor_occ %}
         			<tr>
-        				<td> <a href = './{{vendor.vendor_id}}'>{{vendor.name }} </a></td>
-        				<td class = "occur"> {{vendor.occurances}}</td>
+        				<td> <a href = './{{vendor.1.0}}'>{{vendor.0}} </a></td>
+        				<td class = "occur"> {{vendor.1.1}}</td>
     			{% endfor %}
     		</table>
 		{% else %}
